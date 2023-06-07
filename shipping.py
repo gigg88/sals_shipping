@@ -1,4 +1,9 @@
-weight = 4.8
+# import random function
+import random
+
+#create random weight between 1 - 100 kg
+weight = random.randint(1,100)
+
 
 #Ground Shipping
 
@@ -45,3 +50,14 @@ else:
     cost_ground_drone = weight * 14.25
 
 print("Drone Shipping $", cost_ground_drone)
+
+#Decision for the customer which pricing to choose:
+
+if cost_ground < cost_ground_premium and cost_ground < cost_ground_drone:
+    print("You should choose Ground Shipping.")
+elif cost_ground_premium < cost_ground and cost_ground_premium < cost_ground_drone:
+    print("You should choose Ground Shipping Premium.")
+else:
+    print("You should choose Ground Shipping by Drone.")
+
+
